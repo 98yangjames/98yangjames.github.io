@@ -1,7 +1,7 @@
 ---
 title: The Seattle Freeze
 layout: post
-post-image: "../assets/images/IMG_2886.jpeg"
+post-image: "../assets/images/IMG_7596.jpeg"
 description: I didn't even know what a Seattle Freeze was, until I started to feel it. 
 tags:
 - Lifestyle
