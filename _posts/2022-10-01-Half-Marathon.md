@@ -12,5 +12,10 @@ tags:
 
 ---
 
-## What am I doing? 
+## Preparation
+
+
+
+## Vlog October 2022
 <iframe src="https://drive.google.com/file/d/1j2yO2ZmEwWOvKVxogewB4D8I7O-nXvo9/preview" width="640" height="480" allow="autoplay"></iframe>
+
