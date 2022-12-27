@@ -13,7 +13,7 @@ tags:
 ---
 
 ## Preparation
-
+I can't believe I actually finished a half-marathon.
 
 
 ## Vlog October 2022
