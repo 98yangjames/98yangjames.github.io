@@ -1,11 +1,11 @@
 - name: Python Stack Overflow API
-  image: "../assets/images/github.png"
+  image: https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_960_720.jpg
   link: https://github.com/98yangjames/PythonStackOverFlow
   description: Error Handler for Python that gives StackOverFlow responses from StackExchange.
 - name: Fantasy Football Analysis
   link: https://github.com/98yangjames/fantasyapi
   image: https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg
-  description: Pulling data from Fantasy Football leagues and doing machine learning and statistical analysis on them.
+  description: Pulling data from Fantasy Football leagues and doing machine learning and statistical analysis.
 - name: Third Project
   link:
   image: https://cdn.pixabay.com/photo/2016/06/25/12/55/art-1478831_960_720.jpg
