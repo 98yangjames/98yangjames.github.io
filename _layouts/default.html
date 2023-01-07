@@ -1,41 +1,25 @@
 ---
-layout: compress
+layout: base
 ---
 
-<!DOCTYPE html>
-<html>
-{% include head.html %}
+<div class="intro-header"></div>
 
-<body>
-  {% include navbar.html %}
-  {% include showcase.html %}
-  {% include about.html %}
-  {% include contact.html %}
-  <!--Footer begins here-->
-  {% include footer.html %}
-</body>
-<script>
-  var navItems = document.getElementsByClassName('navbar-item');
-  var heroes = document.getElementsByClassName('hero');
-  const viewOffset = 200; 
+<div role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  {% if page.before-content %}
+    <div class="before-content">
+      {% for file in page.before-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
-  window.addEventListener("scroll", function (event) {
-    var scroll = this.scrollY;
-    var position = window.pageYOffset;
+  {{ content }}
 
-    for (var i = 0; i < navItems.length; i++) {
-      navItems[i].classList.remove('is-active');
-    }
-
-    for (var i = 0; i < heroes.length; i++) {
-        var sectionTop = heroes[i].offsetTop-viewOffset;
-        var sectionBottom = heroes[i].offsetTop + heroes[i].offsetHeight-viewOffset;
-
-        if (scroll >= sectionTop && scroll < sectionBottom) {
-          navItems[i+1].classList.add('is-active');
-      }
-    }
-  });
-</script>
-
-</html>
+  {% if page.after-content %}
+    <div class="after-content">
+      {% for file in page.after-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

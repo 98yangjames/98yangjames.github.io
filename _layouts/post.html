@@ -1,85 +1,82 @@
 ---
-layout: compress
+layout: base
 ---
 
-<!DOCTYPE html>
-<html>
+{% include header.html type="post" %}
 
-<head>
-  {% include head.html %}
-</head>
+<div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  <div class="row">
+    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
 
-<body>
-  {% include navbar.html %}
+      {% if page.gh-repo %}
+        {% assign gh_split =  page.gh-repo | split:'/'  %}
+        {% assign gh_user =  gh_split[0]  %}
+        {% assign gh_repo =  gh_split[1]  %}
 
-  <section class="hero is-fullheight has-text-centered" id="post">
-    <div class="hero-body">
-      <div class="container">
-        <a href="{{page.url | relative_url}}" class="has-text-black" id="title">
-          <h1 class="title has-text-centered is-2 has-text-weight-semibold ">{{page.title}}</h1>
-        </a>
-        <hr class="has-background-black">
-        <div class="columns is-variable is-5">
-          <div class="column is-6">
-            <figure class="image is-16by9 has-shadow">
-              <img src="{{page.post-image}}" alt="{{post.title}}" id="post-image">
-            </figure>
-          </div>
-          <div class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
-            {% unless page.description.size == 0 %}
-            <p id="description" class="content is-small has-text-weight-medium is-uppercase">{{page.description | strip | strip_html | strip_newlines }}</p>
-            {% endunless %}
-            <p class="subtitle is-6 is-uppercase has-text-weight-normal has-text-black-ter">Published on
-              <b>{{ page.date | date: "%-B %d, %Y" }}</b> by <a href="{% if site.author-url %}{{site.author-url}}{% else %}{{site.url}}{{site.baseurl}}/#about{% endif %}" target="_blank"><b class="has-text-link"><u>{{site.author-name}}</u></b>
-              </a>
-            </p>
-            {%- assign tags = page.tags -%}
-            {%- unless tags.size == 0 -%}
-            <p class="subtitle is-uppercase">
-              <i class="fas fa-tags"></i>
-              {% assign i = 0 %}
-              {% for tags in page.tags %}
-              <span class="tag is-link">{{page.tags[i]}}</span>
-              {% assign i = i | plus:1 %}
-              {% endfor %}
-            </p>
-            {%- endunless -%}
-            {% assign words = content | number_of_words %}
-            {%- unless content.size == 0 -%}
-            <p class="subtitle is-uppercase"><i class="fas fa-clock"></i> <b class="has-text-link">
-                {{ words | divided_by:180 }} min
-              </b>READ</p>
-            {%- endunless -%}
-          </div>
+        <div id="header-gh-btns">
+          {% if page.gh-badge.size > 0 %}
+            {% for badge in page.gh-badge %}
+              {% case badge %}
+                {% when 'star'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'watch'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'fork'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'follow'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              {% endcase %}
+            {% endfor %}
+          {% endif %}
         </div>
-        <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
-          <p>{{ content }}</p>
+      {% endif %}
+
+      {% if page.before-content %}
+        <div class="before-content">
+          {% for file in page.before-content %}
+            {% include {{ file }} %}
+          {% endfor %}
         </div>
-        {% unless site.disqus-shortname == "" %}
-        <div class="disqus-comments" id="disqus_thread"></div>
-        {% endunless %}
-      </div>
+      {% endif %}
+
+      <article role="main" class="blog-post">
+        {{ content }}
+      </article>
+
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+          <span>Tags:</span>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.after-content %}
+        <div class="after-content">
+          {% for file in page.after-content %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.social-share %}
+        {% include social-share.html %}
+      {% endif %}
+
+      <ul class="pagination blog-pager">
+        {% if page.previous.url %}
+        <li class="page-item previous">
+          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">&larr; Previous Post</a>
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="page-item next">
+          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">Next Post &rarr;</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% include comments.html %}
     </div>
-  </section>
-  {% include footer.html %}
-</body>
-<script>
-  /**
-   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function () { /* DON'T EDIT BELOW THIS LINE */
-    var d = document,
-      s = d.createElement('script');
-    s.src = 'https://{{site.disqus-shortname}}.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
-</html>
+  </div>
+</div>

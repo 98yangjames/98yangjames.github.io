@@ -1,57 +1,47 @@
-<footer id="footer">
-    <!--Footer Button-->
-    <div class="container has-text-centered has-background-grey-darker" id="backtotop">
-        <a class="has-text-white" onclick="window.scroll(0,0)">BACK TO TOP</a>
-    </div>
-    <!--Footer Main Section-->
-    <div class="has-background-grey-darker">
-        <div class="container columns">
-            <!--Name Section-->
-            <div class="column has-text-left-desktop has-text-centered-mobile">
-                <a href="{{site.url}}{{site.baseurl}}/#about">
-                    <div class="columns">
-                        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
-                            <figure class="image is-64x64">
-                                <img class="is-rounded" src="{{site.author-image}}">
-                            </figure>
-                        </div>
-                        <div class="column is-marginless">
-                            <h5 class="has-text-grey-lighter">{{site.author-name}}</h5>
-                            <div class="content has-text-grey">
-                                <p>{{site.author-about | truncate: 75 }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!--Link Section-->
-            <div class="column has-text-white">
-                <h3>More Links</h3>
-                {% for sitepage in site.html_pages offset: 4 %}
-                {% unless sitepage.url == '/'  limit: 2 %}
-                <li>
-                    <a href="{{sitepage.url | absolute_url}}">{{sitepage.title}}</a>
-                </li>
-                {% endunless %}
-                {% endfor %}
-                <li>
-                    <a target="_blank" href="{{site.url}}{{site.baseurl}}/feed.xml">Subscribe via RSS</a>
-                </li>
-            </div>
-
-            <!--Blog-post Section-->
-            <div class="column has-text-white">
-                <h3>Recent Posts</h3>
-                {% for post in site.posts offset: 0 limit:3 %}
-                <li>
-                    <a href="{{post.url | absolute_url}}">{{post.title}}</a>
-                </li>
-                {% endfor %}
-            </div>
+<footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      {% include social-networks-links.html %}
+      {% if page.footer-extra %}
+        <div class="footer-custom-content">
+          {% for file in page.footer-extra %}
+            {% include {{ file }} %}
+          {% endfor %}
         </div>
+      {% endif %}
+      <p class="copyright text-muted">
+      {% if site.author %}
+        {{ site.author }}
+        &nbsp;&bull;&nbsp;
+      {% endif %}
+      {{ site.time | date: '%Y' }}
+
+      {% if site.url-pretty %}
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+        </span>
+      {% endif %}
+
+      {% if site.matomo %}
+        {% if site.matomo.opt-out %}
+          &nbsp;&bull;&nbsp;
+          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+        {% endif %}
+      {% endif%}
+
+      {% if site.edit_page_button and site.github.repository_url %}
+        &nbsp;&bull;&nbsp;
+        <a title="Edit this page on GitHub" href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}" class="text_muted">Edit page</a>
+       {% endif%}
+
+      </p>
+      {% unless site.remove-ads %}<p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>{% endunless %}
+      </div>
     </div>
-    <div class="has-background-black has-text-centered has-text-white" id="credits">
-        <i class="far fa-copyright"></i> {{ "now" | date: "%Y" }} | <a href="https://github.com/thedevslot/WhatATheme" target="_blank" rel="noopener noreferrer">WhatATheme</a> - A Theme made with <i class="fas fa-heart has-text-danger"></i> by <a href="https://www.twitter.com/thedevslot" target="_blank" rel="noopener noreferrer">TheDevsLot</a> Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
-    </div>
+  </div>
 </footer>
