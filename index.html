@@ -2,46 +2,19 @@
 layout: default
 ---
 
-<section id="header" class="theme-blue element">
-    {% include header.html %}
-</section>
 
-<section id="contacts-bar" >
+{% include career-profile.html %}
 
-    {% include nav.html class="justify-content-center" links = site.data.contact-links type="contacts-bar" %}
+{% unless site.data.data.sidebar.education %}
+  {% include education.html %}
+{% endunless %}
 
-</section>
+{% include experiences.html %}
 
+{% include projects.html %}
 
-<section id="navigation-bar" >
+{% include oss-contributions.html %}
 
-    {% include nav.html class="justify-content-center" links = site.data.links type="navbar" %}
+{% include publications.html %}
 
-</section>
-
-
-<section id="experiences"  class="section";>
-    {% include experiences.html experiences=site.data.experiences %}
-</section>
-
-<section id="skills" class="section" >
-    {% include skills.html skills=site.data.skills %}
-</section>
-
-<section id="portfolio" class="section" >
-
-    {% include portfolio.html items=site.data.portfolio.data %}
-
-</section>
-
-<section id="education" class="section">
-    {% include education.html %}
-</section>
-
-<section id="contact" class="section">
-    {% include contact.html %}
-</section>
-
-<section id="footer" class="section">
-    {% include footer.html %}
-</section>
+{% include skills.html %}

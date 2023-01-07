@@ -1,43 +1,101 @@
+<div class="contact-container container-block">
+  <ul class="list-unstyled contact-list">
 
+    {% if sidebar.email %}
+    <li class="email"><i class="fas fa-envelope"></i>
+      <a href="mailto:{{ sidebar.email }}">{{ sidebar.email }}</a>
+    </li>
+    {% endif %}
 
-<div class="container">
-    <h3 class="section-heading text-center "> Get in Touch</h3>
-    <div class="row contact-section">
-        <div class="col-md-2 image">
-            <img src="/images/profile.jpg " alt="Profile Image" class="rounded-circle mx-auto d-block img-fluid profile-pic ">
-            <p class="text-center padding-top-5">Ankanna</p>
-        </div>
+    {% if sidebar.phone %}
+    <li class="phone"><i class="fas fa-phone"></i>
+      <a href="tel:{{ sidebar.phone }}">{{ sidebar.phone }}</a>
+    </li>
+    {% endif %}
 
-        <div class="col-md-10">
-            <p class="text-justify description ">
-                I'm looking for the right opportunity where I can enrich my skills and serve wholeheartedly without being under
-                pressure and overdose. I'm currently taking on freelancing work and open for remote work aswell. I feel
-                great things will happen when you are set free to work on I mean the Free style of
-                coding. No excuse for me to learn new things from the great people like you and of course hardworking. I feel great pleasure working with
-                you and your team if I am recruited Our Team. <strong> Cheers ! </strong></p>
+    {% if sidebar.citizenship %}
+    <li class="phone"><i class="fas fa-passport"></i>
+      <a href="">{{ sidebar.citizenship }}</a>
+    </li>
+    {% endif %}
 
-            <p class="thanks theme-color padding-top-10"> Many Thanks :) </p>
+    {% if sidebar.timezone %}
+    <li class="timezone"><i class="fas fa-clock"></i>
+      <a href="">{{ sidebar.timezone }}</a>
+    </li>
+    {% endif %}
 
-            <p class=" padding-top-5 helping-line">I can help with the following:</p>
-                <ul class="list-unstyled list">
+    {% if sidebar.telegram %}
+    <li class="telegram"><i class="fab fa-telegram"></i>
+      <a href="https://t.me/{{ sidebar.telegram }}" target="_blank">{{ sidebar.telegram }}</a>
+    </li>
+    {% endif %}
 
-                    <li class="padding-top-25 padding-left-50"><i class="fa fa-check theme-color contact-icon" >  </i> Backend Development - Phoenix/Elixir </li>
-                    <li class="padding-top-25 padding-left-50"><i class="fa fa-check theme-color contact-icon" >  </i> Frontend Development - EmberJs </li>
-                    <li class="padding-top-25 padding-left-50"><i class="fa fa-check theme-color contact-icon" >  </i> UI -Designing Adobe Illustrator/Photoshop </li>
-                    <li class="padding-top-25 padding-left-50"><i class="fa fa-check theme-color contact-icon" >  </i> Video - Editing  Adobe PremierPro/After effects </li>
+    {% if sidebar.website %}
+    <li class="website"><i class="fas fa-globe-americas"></i>
+      <a href="http://{{ sidebar.website }}" target="_blank">{{ sidebar.website }}</a>
+    </li>
+    {% endif %}
 
-                </ul>
-                <span>Happy to learn New Things on demand of Technology </span>
+    {% if sidebar.linkedin %}
+    <li class="linkedin"><i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank">{{ sidebar.linkedin }}</a>
+    </li>
+    {% endif %}
 
-            <p class="text-left info">Drop me line at <span class="theme-color"> <a href="mailto: hello@blackode.in">hello@blackode.in</a> </span> or call me at <span class="theme-color"> 0 9494 5072 87 </span></p>
-            <div class="social-media">
-                {% include social.html social= site.data.profile.social %}
-            </div>
+    {% if sidebar.xing %}
+    <li class="xing"><i class="fab fa-xing"></i>
+      <a href="https://www.xing.com/profile/{{ sidebar.xing }}" target="_blank">{{ sidebar.xing }}</a>
+    </li>
+    {% endif %}
 
-        </div>
+    {% if sidebar.github %}
+    <li class="github"><i class="fab fa-github"></i>
+      <a href="http://github.com/{{ sidebar.github }}" target="_blank">{{ sidebar.github }}</a>
+    </li>
+    {% endif %}
 
-    </div>
+    {% if sidebar.gitlab %}
+    <li class="gitlab"><i class="fab fa-gitlab"></i>
+      <a href="http://gitlab.com/{{ sidebar.gitlab }}" target="_blank">{{ sidebar.gitlab }}</a>
+    </li>
+    {% endif %}
 
+    {% if sidebar.bitbucket %}
+    <li class="bitbucket"><i class="fab fa-bitbucket"></i>
+      <a href="http://bitbucket.com/{{ sidebar.bitbucket }}" target="_blank">{{ sidebar.bitbucket }}</a>
+    </li>
+    {% endif %}
 
+    {% if sidebar.twitter %}
+    <li class="twitter"><i class="fab fa-twitter"></i>
+      <a href="https://twitter.com/{{ sidebar.twitter }}" target="_blank">{{ sidebar.twitter }}</a>
+    </li>
+    {% endif %}
 
-</div>
+    {% if sidebar.stack-overflow %}
+    <li class="stack-overflow"><i class="fab fa-stack-overflow"></i>
+      <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank">{{ sidebar.stack-overflow }}</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.codewars %}
+    <li class="codewars"><i class="fas fa-code"></i>
+      <a href="https://www.codewars.com/users/{{ sidebar.codewars }}/completed_solutions" target="_blank">{{ sidebar.codewars }}</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.goodreads %}
+    <li class="goodreads-g"><i class="fab fa-goodreads-g"></i>
+      <a href="https://www.goodreads.com/user/show/{{ sidebar.goodreads }}" target="_blank">{{ sidebar.goodreads }}</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.pdf %}
+    <li class="pdf"><i class="fas fa-file-pdf"></i>
+      <a href="{{ sidebar.pdf }}" target="_blank">Resume PDF</a>
+    </li>
+    {% endif %}
+
+  </ul>
+</div><!--//contact-container-->

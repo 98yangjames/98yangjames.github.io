@@ -1,46 +1,84 @@
-# Programmers Online Resume Template
-## INTRO
-This is a Responsive Resume template for programmers. It is developed using [Jekyll](https://jekyllrb.com)
+<a href="https://jekyll-themes.com">
+<img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
+</a>
 
-![main-screen-shot](screenshots/main.png)
-For more screenshots check [wiki](https://github.com/blackode/online-resume/wiki)
+# Orbit
+> This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/).
+> Visit her [website](http://themes.3rdwavemedia.com/) for more themes.
 
-## So what is Jekyll all about?
-Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like [Markdown](https://daringfireball.net/projects/markdown/)) and our [Liquid](https://shopify.github.io/liquid/) renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind [GitHub Pages](pages.github.com), which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
+I have made this into a Jekyll Theme. Checkout the live demo [here](https://online-cv.webjeda.com).
 
-### Jekyll Installation 
-Follow this [Jekyll Installation Guide](https://jekyllrb.com/docs/installation/)
+<table>
+  <tr>
+    <th>Desktop</th>
+    <th>Mobile</th>
+  </tr>
+  <tr>
+    <td>
+        <img src="https://online-cv.webjeda.com/assets/images/desktop.png?raw=true" width="600"/>
+    </td>
+    <td>
+        <img src="https://online-cv.webjeda.com/assets/images/mobile.png?raw=true" width="250"/>
+    </td>
+  </tr>
+</table>
 
-### Installing Dependencies
-After clonning the project, go to your projet root directory and install the dependencies
-```js
+## Installation
+
+* [Fork](https://github.com/sharu725/online-cv/fork) the repository
+* Go to settings and set master branch as Github Pages source.
+* Your new site should be ready at `https://<username>.github.io/online-cv/`
+* Printable version of the site can be found at `https://<username>.github.io/online-cv/print`. Use a third party link https://pdflayer.com/, https://www.web2pdfconvert.com/ etc to get the printable PDF.
+
+Change all the details from one place: ``_data/data.yml``
+
+## To preview/edit locally with docker
+
+```sh
+docker-compose up
+```
+
+*docker-compose.yml* file is used to create a container that is reachable under http://localhost:4000.
+Changes *_data/data.yml* will be visible after a while.
+
+### Local machine
+
+* Get the repo into your machine 
+```bash
+git clone https://github.com/sharu725/online-cv.git
+```
+* Install required ruby gems
+```bash
 bundle install
 ```
-### Running Server
-```js
+* Serve the site locally
+```bash
 bundle exec jekyll serve
 ```
-According the configuration of this project, as I wrote, the server will start at local address.    
-Here I assigned **0.0.0.0:4000** or you can visit **localhost:4000**
-
-### Web Technologies Used
-1. Bootstrap
-2. Javascript/jQuery
-3. Jekyll - Ruby/Gems
-4. SCSS/SASS
-
-### How Edit this project
-You just edit the `_data` folder files, The code will get updated automatically.      
-The advanced editing and detail description will be adding soon in wiki sections.      
-Glad if you can help me to do that fast.    
-
-Mean while if you need help write a line **hello@blackode.in** or raise an **issue** in issues section.
- 
+* Navigate to `http://localhost:4000`
 
 
-The good features are welcomed with **Great Respect**. Please feel free to contribute.
+## Skins
 
-**Thank You :)**         
-**Happy Coding !!**
+There are 6 color schemes available:
 
-Buy me a coffe ::coffee:: If you find this useful : [Paypal](https://paypal.me/ankanna)
+| Blue | Turquoise | Green |
+|---------|---------|---------|
+| <img src="https://online-cv.webjeda.com/assets/images/blue.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/turquoise.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/green.jpg" width="300"/> |
+
+| Berry | Orange | Ceramic |
+|---------|---------|---------|
+| <img src="https://online-cv.webjeda.com/assets/images/berry.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/orange.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/ceramic.jpg" width="300"/> |
+
+## Credits
+
+Thanks to [Nelson Estevão](https://github.com/nelsonmestevao) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=nelsonmestevao).
+
+Thanks to [t-h-e(sfrost)](https://github.com/t-h-e) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=t-h-e).
+
+Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sharu725/online-cv&type=Date)](https://star-history.com/#sharu725/online-cv&Date)
+

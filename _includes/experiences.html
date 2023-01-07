@@ -1,49 +1,37 @@
-<div class="container">
+{% assign experiences = site.data.data.experiences %}
+{% if experiences %}
+<section class="section experiences-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ experiences.title }}
+  </h2>
 
-    <h3 class="text-center section-heading"> Work Experiences </h3>
-    {% for experience in include.experiences %}
-        <div class="row">
-            <div class="col-md-4 text-left">
-                <h4 class="experience-title" >{{ experience.title }}</h4>
-                <p class="experience-period" >{{ experience.period }}</p>
+  {% for experience in experiences.info %}
+  <div class="item">
 
-            </div>
-            <div class="col-md-8 timeline">
-                <div class="row item">
-                    <div class="experience-company col-md-6 float-left">
+    <div class="meta">
 
-                        <h4 class="text-left ">{{ experience.company }}</h4>
-                    </div>
-                    <div class="col-md-6 experience-location float-right">
-                        <span class="float-right text-right">
-                            <i class="fa fa-map-marker experience-icon-map-marker" aria-hidden="true"></i> {{ experience.location }}
-                        </span>
-                    </div>
-                </div>
+      <div class="upper-row">
+        <h3 class="job-title">{{ experience.role }}</h3>
+        <div class="time">{{ experience.time }}</div>
+      </div><!--//upper-row-->
 
-                <div class="experience-description col-md-12">
-                    <p class="text-justify"> {{ experience.description }}</p>
+      <div class="company">{{ experience.company }}</div>
 
-                    {% if experience.apps %}
+    </div><!--//meta-->
 
-                        <ul class="mobile-apps">
+    {% if experience.details %}
+    <div class="details">
+      {{ experience.details | markdownify }}
+    </div><!--//details-->
+    {% endif %}
 
-                            {% for app in experience.apps %}
+  </div><!--//item-->
+  {% endfor %}
 
-                                <li>
-                                    <h4 class="mobile-app-name"><a href="{{ app.link }}"> {{ app.name }} </a></h4>
-                                    <p class="mobile-app-description"> {{ app.desc }}</p>
-                                </li>
+</section><!--//section-->
+{% endif %}
 
-                            {% endfor %}
-
-                        </ul>
-
-                    {% endif %}
-
-                </div>
-            </div>
-        </div>
-
-    {% endfor %}
-</div>
