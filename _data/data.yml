@@ -23,7 +23,7 @@ sidebar:
     # telegram: # add your nickname without '@' sign
     # gitlab:
     # bitbucket:
-    twitter: '@webjeda'
+    # twitter: '@webjeda'
     # stack-overflow: # Number/Username, e.g. 123456/alandoe
     # codewars:
     # goodreads: # Number-Username, e.g. 123456-alandoe
@@ -35,22 +35,20 @@ sidebar:
         - idiom: English
           level: Native
 
-        - idiom: French
-          level: Professional
+        - idiom: Chinese
+          level: Intermediate
 
-        - idiom: Spanish
-          level: Professional
 
     interests:
       title: Interests
       info:
-        - item: Climbing
+        - item: Basketball & Football
           link:
 
-        - item: Snowboarding
+        - item: Music
           link:
 
-        - item: Cooking
+        - item: Video-making
           link:
 
 career-profile:
@@ -65,9 +63,9 @@ career-profile:
 education:
     title: Education
     info:
-      - degree: MSc in Computer Science
-        university: University of London
-        time: 2011 - 2012
+      - degree: MSc in Data Science
+        university: University of Washington
+        time: 2021-2023
         details: |
           Describe your study here lorem ipsum dolor sit amet, consectetuer
           adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
@@ -76,9 +74,9 @@ education:
           pretium quis, sem.
             - Bullet point
             - Bullet point
-      - degree: BSc in Applied Mathematics
-        university: Bristol University
-        time: 2007 - 2011
+      - degree: BSc in Electrical & Computer Engineering
+        university: Oregon State University
+        time: 2017-2021
         details: |
           Describe your study here lorem ipsum dolor sit amet, consectetuer
           adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
