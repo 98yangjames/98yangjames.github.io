@@ -107,6 +107,9 @@ projects:
     intro: >
       
     assignments:
+      - title: Mass Shooting Analysis
+        link: "https://medium.com/@jamesyang98/mass-shooting-analysis-f01154e37371"
+        tagline: "Pulling data on Mass Shootings and creating a Danger Score Analysis"
 
       - title: Fantasy Football Machine Learning API
         link: "https://github.com/TomasMeade/NFLFantasy"
