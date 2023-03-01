@@ -107,6 +107,10 @@ projects:
     intro: >
       
     assignments:
+      - title: Spotify Machine Learning
+        link: "https://github.com/98yangjames/SpotifyML"
+        tagline: "Pulling from Spotify API, cleaning and applying Random Forest, K-Means Clustering to data to predict likability of new songs."
+
       - title: Mass Shooting Analysis
         link: "https://medium.com/@jamesyang98/mass-shooting-analysis-f01154e37371"
         tagline: "Pulling data on Mass Shootings and creating a Danger Score Analysis"
@@ -125,34 +129,29 @@ projects:
       
 
       - title: EEG Brain Signal Decoding
-        link: ""
+        # link: ""
         tagline: "mplemented a CNN with 3 layers in Python. Using 2 layer max pooling to reduce dimensionality to predict hand-movement from human EEG brain signal multi-channel readings, predicted 74.3% of human hand movement. Sampled EEG measurements from 10 people with headgear; predicted their individual hand movements also using
 LDA and CV with K-Folds along with A/B testing."
       
       - title: 2D-Axis Robotic Arm
         link: "https://www.youtube.com/watch?v=9m1BgfleYVE&t=15s&ab_channel=JamesYang"
         tagline: "Developing a fully functioning 2D-Axis Robotic Arm utilizing stepper motors, WiFi module, Arduino Uno, 2 Motor Driver ICs, self-developed G-Code interpreter, and 3D printed components to draw lines at an optimal speed. The components are stored on a self-developed PCB. "
-
-
       
-# oss:
-#     title: OSS Contributions
-#     intro: >
-#       You can list your open source software contributions in this
-#       section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-#       Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-#     contributions:
-#       - title: Tempo
-#         link: "#"
-#         tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+oss:
+    title: Research / Volunteering
+    contributions:
+      - title: Naval Adversarial Researcher
+        link: "#"
+        tagline: "Researching and implementing SHAP, an Explainable AI algorithm in Python. Developing a decoding method that outputs scoring values for game-theoretic attacks for humans to interpret at a higher level (feature-relevant scale)."
+      - title: OPEnS Lab
+        link: "https://open-sensing.org/opens/about/your-team"
+        tagline: "Ecological and Hardware Engineering lab developing cost-effective sensors."
 
-#       - title: Atom
-#         link: "#"
-#         tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+      - title: Mathnasium Instructor
+        link: "https://www.mathnasium.com/northeastseattle/our-team"
+        tagline: "Assisted students in topics ranging from Pre-Algebra to Calculus"
 
-#       - title: Delta
-#         link: "#"
-#         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+
 
 # publications:
 #     title: Publications
