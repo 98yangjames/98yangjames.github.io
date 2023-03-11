@@ -107,9 +107,9 @@ projects:
     intro: >
       
     assignments:
-      - title: Spotify Machine Learning
-        link: "https://github.com/98yangjames/SpotifyML"
-        tagline: "Pulling from Spotify API, cleaning and applying Random Forest, K-Means Clustering to data to predict likability of new songs."
+      - title: Spotify Machine Learning Web Application
+        link: "https://github.com/98yangjames/MachineLearningWebApp"
+        tagline: "Pulling from Spotify API, cleaning and applying Random Forest to data to predict likability of new songs. Deployed Python web application using Flask"
 
       - title: Mass Shooting Analysis
         link: "https://medium.com/@jamesyang98/mass-shooting-analysis-f01154e37371"
