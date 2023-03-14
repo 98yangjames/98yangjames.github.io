@@ -108,7 +108,7 @@ projects:
       
     assignments:
       - title: Spotify Machine Learning Web Application
-        link: "https://github.com/98yangjames/MachineLearningWebApp"
+        link: "https://medium.com/@jamesyang98/apply-machine-learning-on-your-spotify-listening-habits-96354bae44a9"
         tagline: "Pulling from Spotify API, cleaning and applying Random Forest to data to predict likability of new songs. Deployed Python web application using Flask"
 
       - title: Mass Shooting Analysis
