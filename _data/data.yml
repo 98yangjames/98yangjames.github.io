@@ -80,6 +80,13 @@ education:
 experiences:
     title: Experiences
     info:
+      - role: Product Development Engineer
+          time: May 2023 - Present
+          company: Intel Corporation, Hillsboro
+          details: |
+              - 
+              - 
+              - 
       - role: Data Science Intern
         time: May 2022 - December 2022
         company: Intel Corporation, Remote
