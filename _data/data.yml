@@ -81,12 +81,12 @@ experiences:
     title: Experiences
     info:
       - role: Product Development Engineer
-          time: May 2023 - Present
-          company: Intel Corporation, Hillsboro
-          details: |
-              - 
-              - 
-              - 
+        time: May 2023 - Present
+        company: Intel Corporation, Hillsboro
+        details: |
+            - Working on Test Program flow using Python, JMP, SQL, Cloud Foundry for development on unreleased upcoming Intel products.
+            - Full stack development on internal application hosted on cloud foundry with Flask/Dash framework.
+            
       - role: Data Science Intern
         time: May 2022 - December 2022
         company: Intel Corporation, Remote
