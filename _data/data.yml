@@ -84,9 +84,11 @@ experiences:
         time: May 2023 - Present
         company: Intel Corporation, Hillsboro
         details: |
-            - Working on Test Program flow using Python, JMP, SQL, Cloud Foundry for development on unreleased upcoming Intel products.
-            - Full stack development on internal application hosted on cloud foundry with Flask/Dash framework.
-            
+            - Windows full-stack developer using C#,SQL, MongoDB, Cloud Foundry for Intel proprietary testing software with 1000 weekly users.
+            - Leading a team of 5 Software Engineers to deliver product to internal customers using scrum and git CI/CD.
+            - Working on Test Program flow using Python, JMP, SQL for development on upcoming 2nm process Intel products.
+            - Automating big data cleaning/pulling through SQL using bash and Python scripts. Stored on both internal and Cloud Foundry containers. Optimizing security by integrating Microsoft Azure into backend of application.
+                        
       - role: Data Science Intern
         time: May 2022 - December 2022
         company: Intel Corporation, Remote
