@@ -84,33 +84,31 @@ experiences:
         time: May 2023 - Present
         company: Intel Corporation, Hillsboro
         details: |
-            - Windows full-stack developer using C#,SQL, MongoDB, Cloud Foundry for Intel proprietary testing software with 1000 weekly users.
-            - Leading a team of 5 Software Engineers to deliver product to internal customers using scrum and git CI/CD.
-            - Working on Test Program flow using Python, JMP, SQL for development on upcoming 2nm process Intel products.
-            - Automating big data cleaning/pulling through SQL using bash and Python scripts. Stored on both internal and Cloud Foundry containers. Optimizing security by integrating Microsoft Azure into backend of application.
-                        
-      - role: Data Science Intern
-        time: May 2022 - December 2022
+          - Creating and driving 3+ production analysis tools to improve Intel die testing, increasing an estimated 5-10% yield through supervised machine learning on wafers to improve customer processor performance.
+          - Automating both ML and Web pipelines for internal analysis applications using bash and Python alongside SQL/Redis. Implementing security on sensitive Intel data, using Microsoft Azure for SSO.
+          - Saving $50,000 on improvements in overall die testing and reliability through data modeling and analysis.
+          - Managing 5+ applications hosted in Kubernetes on Rancher.
+
+      - role: Data Scientist
+        time: May 2022 - May 2023
+        company: Intel Corporation, Seattle
+        details: |
+          - Led a team of 3 in developing predictive models for optimizing Intel chip processes, resulting in 10% reduction in materialized defects.
+          - Deriving material defects that result in 10% time savings for processor improvement using unsupervised modeling, Pandas, and SQL by training 30+ features into an interpretable predictive output for predicting processor strength.
+          - Modeling processor self-repair with K-means clustering, Z-score models, and regression models to classify, detect, and verify outlier repair rates, potentially saving millions in mass-produced wafers.
+          - Marketing project to director and VP of org using Tableau to produce interest and introduce new workflow within org to increase 20% efficiency in data pulling.
+
+      - role: Software Engineer
+        time: September 2020 - May 2022
         company: Intel Corporation, Remote
         details: |
-            - Developing an automated detection model in Python detecting faulty die within test programs saving 5 hours per program on multiple flagship products.
-            - Developing a CRUD application for human-in-the-loop interaction with repair model in Python using Plotly, Dash, and SQL.
-            - Marketing project to director and VP of org to produce interest and introduce new workflow within org to increase 20% efficiency in data pulling, receiving a full time offer.
-      - role: Software Engineer Intern
-        time: May 2021 - September 2021
-        company: Intel Corporation, Hillsboro
-        details: |
           
-            - Windows full-stack developer using C# and SQL for Intel proprietary testing software with 1000 weekly users.
-            - Creation of a magnet application that works with Windows Registry HKEY users to allow for magnet call.
-            - Developed utilizing pair programming, unit testing, SCRUM, and git version control.
-            - Ran Test Program integrations and stress tests for unreleased processors on both wafer burn in and array level.
-      - role: Product Development Engineer Intern
-        time: June 2020 - September 2020
-        company: Intel Corporation, Hillsboro
-        details: |
-            - Test program analysis with internal tools. Running integrations, vmin/vmax, and Shmoo analysis on die.
-            - Developed internal test program tool using C# to automate analysis.
+          - Collaborating with cross-functional teams using root-cause analysis on latest Intel 20A/18A processor. Working to create a framework that incorporates efficient data pipelining to front-end user interface for Intel sensitive data.
+          - Conducting code reviews and developing in scrum/agile environments to drive solutions.
+          - Creating internal tooling features under a project lead to reach sprint goals for improved data analysis, generating 3+
+          new standardized metrics on processor performance for engineers to reach.
+          - Developing Windows Full-Stack Applications using C#,SQL, HTML, and RestAPI. Testing APIs using Postman.
+
 projects:
     title: Projects
     intro: >
