@@ -80,8 +80,14 @@ education:
 experiences:
     title: Experiences
     info:
+      - role: Data Application Engineer
+        time: March 2026 - Present
+        company: Apple Corporation, Austin
+        details: |
+          - Working on Big Data
+
       - role: Product Development Engineer
-        time: May 2023 - Present
+        time: May 2023 - March 2026
         company: Intel Corporation, Hillsboro
         details: |
           - Creating and driving 3+ production analysis tools to improve Intel die testing, increasing an estimated 5-10% yield through supervised machine learning on wafers to improve customer processor performance.
